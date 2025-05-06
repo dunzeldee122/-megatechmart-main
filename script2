@@ -19,7 +19,7 @@ pipeline {
             }
         }
 
-        stage('Deploy (Optional)') {
+        stage('Deploy') {
             steps {
                 echo 'Step 1: Preparing for deployment...'
                 echo 'Step 2: Static site ready. You can deploy manually or add FTP/hosting steps here.'
