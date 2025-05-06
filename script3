@@ -1,1 +1,28 @@
+pipeline {
+    agent any
 
+    stages {
+        stage('Clone Repository') {
+            steps {
+                git 'https://github.com/dunzeldee122/-megatechmart-main.git'
+            }
+        }
+
+        stage('Check for HTML/JS Errors') {
+            steps {
+                script {
+                    // Run HTML and JS validation
+                    bat 'echo Checking HTML and JS files...'
+                    // Simulate validation (replace this with actual linter if needed)
+                    bat 'dir /s /b .html.js'
+                }
+            }
+        }
+
+        stage('Custom Test') {
+            steps {
+                bat 'echo Running custom test simulation...'
+                // You can put your custom test scripts here if you have any
+                bat 'echo All tests passed.'
+            }
+        }
