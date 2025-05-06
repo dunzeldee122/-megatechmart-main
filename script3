@@ -2,27 +2,51 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Repository') {
+        stage('Check for HTML Errors') {
             steps {
-                git 'https://github.com/dunzeldee122/-megatechmart-main.git'
+                bat '''
+                @echo off
+                echo === Checking HTML files for missing </html> or </body> tags ===
+                setlocal enabledelayedexpansion
+                set errorFound=0
+
+                for /R %%f in (*.html) do (
+                    findstr /I /C:"</html>" "%%f" >nul
+                    if errorlevel 1 (
+                        echo [ERROR] Missing </html> in %%f
+                        set errorFound=1
+                    )
+
+                    findstr /I /C:"</body>" "%%f" >nul
+                    if errorlevel 1 (
+                        echo [ERROR] Missing </body> in %%f
+                        set errorFound=1
+                    )
+                )
+
+                if "!errorFound!"=="1" (
+                    echo One or more HTML errors were found.
+                    exit /b 1
+                ) else (
+                    echo ✅ All HTML files passed basic checks.
+                )
+                '''
             }
         }
 
-        stage('Check for HTML/JS Errors') {
+        stage('Final Status') {
             steps {
-                script {
-                    // Run HTML and JS validation
-                    bat 'echo Checking HTML and JS files...'
-                    // Simulate validation (replace this with actual linter if needed)
-                    bat 'dir /s /b .html.js'
-                }
+                echo 'Finished checking HTML files.'
             }
         }
+    }
 
-        stage('Custom Test') {
-            steps {
-                bat 'echo Running custom test simulation...'
-                // You can put your custom test scripts here if you have any
-                bat 'echo All tests passed.'
-            }
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
         }
+        failure {
+            echo 'Pipeline failed due to HTML issues.'
+        }
+    }
+}
