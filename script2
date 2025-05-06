@@ -5,7 +5,7 @@ pipeline {
         stage('Clone Repo') {
             steps {
                 echo 'Step 1: Starting clone...'
-                git 'https://github.com/dunzeldee122/uisignuptest.git'
+                git 'https://github.com/dunzeldee122/-megatechmart-main.git'
                 echo 'Step 2: Clone complete.'
             }
         }
