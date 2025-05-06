@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="Product.css"> <!-- Link to Product.css -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            color: #fff;
+            padding: 10px;
+            background-image: url(images/background.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: transparent;
+            border-radius: 8px;
+            box-shadow: 0 0 10px cyan;
+        }
+
+        img {
+            width: 40%;
+            border-radius: 8px 8px 0 0;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .product-price {
+        font-size: 1.1em;
+        color: #4ef594;
+        margin-bottom: 10px;
+        }
+
+
+        .product-info {
+            padding: 20px;
+        }
+        h1{
+            color: cyan;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: cyan;
+        }
+
+        h3{
+            color: cyan;
+        }
+
+        p {
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .star {
+            color: #f0c30f;
+            font-size: 20px;
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: cyan;
+            color: rgb(77, 0, 139);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: rgb(195, 0, 255);
+        }
+
+        .comments {
+            margin-top: 20px;
+        }
+
+        .comment {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        .comment .user-rating {
+            display: flex;
+            align-items: center;
+        }
+
+        .comment .user-rating .star {
+            color: #f0c30f;
+            font-size: 16px;
+            margin-right: 5px;
+        }
+
+        .related-products {
+            display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        max-width: 1900px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: transparent;
+        border-radius: 8px;
+        box-shadow: 0 0 10px cyan;
+        }
+
+        .related-product {
+            border: 1px solid cyan;
+            padding: 70px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        .related-product img {
+            width: 60%;
+            border-radius: 8px;
+            margin-bottom: 5px;
+            margin-top: -40px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 10px;
+            margin-left: 10px;
+            text-align: center;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: transparent;
+            color: #fff;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            border-radius: 8px;
+            box-shadow: 0 0 10px cyan;
+        }
+
+        .back-link:hover {
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Product Details</h1>
+    
+
+    <div class="container">
+        <a href="2product.html" class="back-link">&lt; Back</a> <!-- Link to go back -->
+        <img src="image/cpu2.jpg" alt="Product Image">
+        <div class="product-info">
+            <h2>AMD Ryzen 5 5600x</h2>
+            <h4>About this item</h4>
+            <p>AMD's fastest 6 core processor for mainstream desktop, with 12 processing threads<br>
+                -Can deliver elite 100 plus FPS performance in the world's most popular games<br>
+                -Bundled with the quiet, capable AMD Wraith Stealth cooler. System Memory Type: DDR4<br>
+                -4.6 GHz Max Boost, unlocked for overclocking, 35 MB of cache, DDR-3200 support<br>
+                -For the advanced Socket AM4 platform, can support PCIe 4.0 on X570 and B550 motherboards . OS Support: Windows 11 - 64-Bit Edition, Windows 10 - 64-Bit Edition, RHEL x86 64-Bit, Ubuntu x86 64-Bit</p>
+                <div class="product-price">P7,800.00</div>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span>(5.0)</span>
+            </div>
+            
+            <button>Buy Now</button>
+            <button>Add to cart</button>
+
+            <div class="comments">
+                <h3>Buyer Comments</h3>
+                <div class="comment">
+                    <p>I purchased it for my budget gaming PC. It performs very well. It may be the best product around its price.</p>
+                    <div class="user-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <p>It is supper fast. I definitely recommend it for gaming and any high quality renders</p>
+                    <div class="user-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="related-products">
+        <h2>Related Products</h2>
+
+        <div class="related-product">
+            <img src="image/cpu1.jpg" alt="Related Product 1">
+            <h3>AMD Ryzen 7 5800X</h3>
+            <div class="product-price">P11,500.00</div>
+            <button>View Details</button>
+        </div>
+
+        <div class="related-product">
+            <img src="image/cpu3.jpg" alt="Related Product 2">
+            <h3>AMD Ryzen 9 5950X</h3>
+            <div class="product-price">P24,500.00</div>
+            <button>View Details</button>
+        </div>
+    </div>
+</header>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberTechHub</title>
+    <link rel="stylesheet" href="55account.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+</head>
+
+
+<body>
+    <div class="account-header">
+
+        <div class="container2">
+            <div class="navbar">
+                <div class="logo">
+                    <div id="try">
+                    <img src="images/logo1.png" width="250px">
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="1index.html">Home</a></li>
+                        <li><a href="2product.html">Products</a></li>
+                        <li><a href="3about.html">About/Services</a></li>
+                        <li><a href="4contact.html">Contact</a></li>
+                        <li class="Account"><a href="5account.html">MyAccount</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+        <div class="signup-container">
+            <div id="signup-form">
+            <h2>Sign Up</h2>
+            <form action="signup.php" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required placeholder="Janny Sheesh">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="jannysheesh@example.com">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="secret....">
+
+                <button type="submit">Sign Up</button>
+            </form>
+
+            <div class="switch">
+                <p>Already have an account? <a href="#" onclick="toggleForm()">Sign In</a></p>
+            </div>
+            </div>
+
+            <div id="signin-form" style="display: none;">
+            <h2>Sign In</h2>
+            <form action="signin.php" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required placeholder="Janny Sheesh">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="secret....">
+
+                <button type="submit">Sign In</button>
+            </form>
+
+            <div class="switch">
+                <p>Don't have an account? <a href="#" onclick="toggleForm()">Sign Up</a></p>
+            </div>
+            </div>
+        </div>
+
+        <script src="account.js"></script>
+
+    </div>
+
+</body>
+</html>
