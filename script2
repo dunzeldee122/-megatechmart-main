@@ -1,1 +1,31 @@
+pipeline {
+    agent any
 
+    stages {
+        stage('Clone Repo') {
+            steps {
+                echo 'Step 1: Starting clone...'
+                git 'https://github.com/dunzeldee122/uisignuptest.git'
+                echo 'Step 2: Clone complete.'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Step 1: Installing dependencies (simulated)...'
+                bat 'echo npm install' // simulate install
+                echo 'Step 2: Building project (simulated)...'
+                bat 'echo npm run build'
+            }
+        }
+
+        stage('Deploy (Optional)') {
+            steps {
+                echo 'Step 1: Preparing for deployment...'
+                echo 'Step 2: Static site ready. You can deploy manually or add FTP/hosting steps here.'
+                // Optional real deployment step (commented)
+                // bat 'echo Deploying to server...'
+            }
+        }
+    }
+}
