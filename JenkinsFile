@@ -4,15 +4,21 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
+                echo 'Cloning repository...'
                 git 'https://github.com/dunzeldee122/-megatechmart-main.git'
             }
         }
 
-        stage('Deploy (Optional)') {
+        stage('Show Files') {
             steps {
-                echo 'Static site ready. You can deploy manually or add FTP/hosting steps here.'
-                // Example: Upload files to a server via scp or FTP
-                // sh 'scp -r * user@yourserver:/var/www/html'
+                echo 'Listing project files...'
+                bat 'dir'
+            }
+        }
+
+        stage('Build Complete') {
+            steps {
+                echo '✅ Files cloned and listed successfully.'
             }
         }
     }
